@@ -234,9 +234,9 @@ def game_loop():
        (-350 < ball.xcor() < -340 and paddle_a.ycor() - 50 < ball.ycor() < paddle_a.ycor() + 50):
         ball.dx *= -1.1  # Increase speed after hitting paddle
 
-    if score_a == 10 or score_b == 10:
+    if score_a == 5 or score_b == 5:
         pen.clear()
-        pen.write(f"{'Player A' if score_a == 10 else 'Player B'} wins!!!", align="center", font=("Courier", 32, "normal"))
+        pen.write(f"{'Player A' if score_a == 5 else 'Player B'} wins!!!", align="center", font=("Courier", 32, "normal"))
         game_running = False
         create_button("reset", "play again", 0, -50, 24, reset_game)
         return
