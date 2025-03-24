@@ -259,9 +259,9 @@ def game_loop():
             ball.sety(obstacle.ycor() + 20 if ball.dy < 0 else obstacle.ycor() - 20)
             ball.dy *= -1
 
-    if score_a == 3 or score_b == 3:
+    if score_a == 5 or score_b == 5:
         pen.clear()
-        pen.write(f"{'Player A' if score_a == 3 else 'Player B'} wins!!!", align="center", font=("Courier", 32, "normal"))
+        pen.write(f"{'Player A' if score_a == 5 else 'Player B'} wins!!!", align="center", font=("Courier", 32, "normal"))
         game_running = False
         create_button("reset", "play again", 0, -50, 24, reset_game)
         return
